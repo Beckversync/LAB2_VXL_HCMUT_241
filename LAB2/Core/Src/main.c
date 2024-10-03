@@ -214,7 +214,7 @@ const int MAX_LED_MATRIX = 8;
 //uint16_t ROW_PIN[8] =  {ROW0_Pin, ROW1_Pin, ROW2_Pin, ROW3_Pin,
 //						ROW4_Pin, ROW5_Pin, ROW6_Pin, ROW7_Pin};
 int index_led_matrix = 0;
-uint8_t matrix_buffer[8] = {0x18, 0x3c, 0x7e, 0x81, 0xff, 0x81, 0x81, 0x81};
+uint8_t matrix_buffer[8] = {0x18 , 0x3C , 0x66 , 0xC3 , 0xFF , 0xFF , 0xC3 , 0xC3 };
 					//0		0		0	  0	   	1	  1		0	  0		0
 					//1		0		0	  1		1	  1		1	  0		0
 					//2		0		1	  1		1	  1		1	  1		0

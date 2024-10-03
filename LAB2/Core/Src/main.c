@@ -165,7 +165,7 @@ void update7SEG(int index){
 		HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, SET);
 		HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, SET);
 		HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, SET);
-
+		display7SEG_1(led_buffer[0]);
 
 		break;
 	case 1:
@@ -175,7 +175,7 @@ void update7SEG(int index){
 		HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, RESET);
 		HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, SET);
 		HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, SET);
-
+		display7SEG_1(led_buffer[1]);
 
 		break;
 	case 2:
@@ -185,7 +185,7 @@ void update7SEG(int index){
 		HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, SET);
 		HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, RESET);
 		HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, SET);
-
+		display7SEG_1(led_buffer[2]);
 
 		break;
 	case 3:
@@ -195,7 +195,7 @@ void update7SEG(int index){
 		HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, SET);
 		HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, SET);
 		HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, RESET);
-
+		display7SEG_1(led_buffer[3]);
 
 		break;
 	default: break;
@@ -447,7 +447,7 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOB, SEG_A_Pin|SEG_B_Pin|SEG_C_Pin|ROW2_Pin
                           |ROW3_Pin|ROW4_Pin|ROW5_Pin|ROW6_Pin
                           |ROW7_Pin|SEG_D_Pin|SEG_E_Pin|SEG_F_Pin
-                          |SEG_G_Pin|ROW0_Pin|ROW1_Pin, GPIO_PIN_RESET);
+						  	  |SEG_G_Pin|ROW0_Pin|ROW1_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : ENM0_Pin ENM1_Pin DOT_Pin LED_RED_Pin
                            EN0_Pin EN1_Pin EN2_Pin EN3_Pin

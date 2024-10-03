@@ -369,20 +369,19 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-int count =3;
-int dot=2;
+int count =25;
+int dot=100;
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 
 	if(count > 0){
 			count --;
 			if(count <= 0){
 				count = 25;
-
 				update7SEG(index_led);
 				index_led = (index_led + 1) % MAX_LED;
 			}
 		}
-	if (dot>0)
+	if ( dot>0)
 	{
 		dot--;
 		if (dot<=0)
@@ -392,7 +391,6 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 		}
 	}
 }
-/* USER CODE END 4 */
 
 /**
   * @brief  This function is executed in case of error occurrence.

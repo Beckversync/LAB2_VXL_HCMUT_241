@@ -58,9 +58,9 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define ENM0_Pin GPIO_PIN_1
+#define ENM0_Pin GPIO_PIN_2
 #define ENM0_GPIO_Port GPIOA
-#define ENM1_Pin GPIO_PIN_2
+#define ENM1_Pin GPIO_PIN_3
 #define ENM1_GPIO_Port GPIOA
 #define DOT_Pin GPIO_PIN_4
 #define DOT_GPIO_Port GPIOA

@@ -1,6 +1,6 @@
 main.c:59:6:display7SEG_1	16	static
 main.c:159:6:update7SEG	16	static
-main.c:204:6:updateClockBuffer	4	static
+main.c:204:6:updateClockBuffer	16	static
 main.c:216:5:main	8	static
 main.c:278:6:SystemClock_Config	72	static
 main.c:314:13:MX_TIM2_Init	32	static

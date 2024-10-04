@@ -246,34 +246,34 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-  setTimer0(1000);
+  set_timer_led(3);
+  set_timer_dot(5);
+  int hour = 15, minute = 8, second = 50;
   while (1)
   {
-	  if(timer0_flag == 1){
-	  		  setTimer0(1000);
-			  second++;
-			  if(second >= 60){
-				  second = 0;
-				  minute++;
-			  }
+  	  if(timer_dot_flag == 1){
+  		  	set_timer_dot(100);
+  			second ++;
+  			if(second >= 60){
+  			  second = 0;
+  			  minute ++;
+  			}
+  			if(minute >= 60){
+  			  minute = 0;
+  			  hour ++;
+  			}
+  			if(hour >= 24){
+  			  hour = 0;
+  			}
+  			updateClockBuffer(hour, minute);
+  			HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
+  	  }
+  	  if(timer_led_flag == 1){
+  		  set_timer_led(25);
+  		  update7SEG(index_led);
+  		  index_led = (index_led + 1) % MAX_LED;
+  	  }
 
-			  if(minute >= 60){
-				  minute = 0;
-				  hour++;
-			  }
-
-			  if(hour >= 24){
-				  hour = 0;
-			  }
-			  updateClockBuffer();
-
-
-			  if(index_led >= MAX_LED) index_led = 0;
-			  update7SEG(index_led++);
-
-
-			  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
-	  	  }
 
     /* USER CODE END WHILE */
 

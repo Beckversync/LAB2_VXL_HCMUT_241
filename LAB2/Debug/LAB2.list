@@ -1590,8 +1590,8 @@ int main(void)
   setTimer1(3);
  8000c94:	2003      	movs	r0, #3
  8000c96:	f7ff fa9b 	bl	80001d0 <setTimer1>
-  setTimer2(2);
- 8000c9a:	2002      	movs	r0, #2
+  setTimer2(4);
+ 8000c9a:	2004      	movs	r0, #4
  8000c9c:	f7ff faac 	bl	80001f8 <setTimer2>
   setTimer3(5);
  8000ca0:	2005      	movs	r0, #5

@@ -414,7 +414,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   int hour = 15, minute = 8, second = 50;
   setTimer1(3);
-  setTimer2(2);
+  setTimer2(4);
   setTimer3(5);
   while (1)
   {

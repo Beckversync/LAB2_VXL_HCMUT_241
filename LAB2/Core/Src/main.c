@@ -267,11 +267,11 @@ int main(void)
 			  }
 			  updateClockBuffer();
 
-			  // represent four 7seg led
+
 			  if(index_led >= MAX_LED) index_led = 0;
 			  update7SEG(index_led++);
 
-			  // toggle dot led
+
 			  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
 	  	  }
 

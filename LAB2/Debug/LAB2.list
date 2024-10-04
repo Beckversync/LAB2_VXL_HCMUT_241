@@ -892,7 +892,7 @@ int main(void)
 			  updateClockBuffer();
  80006e6:	f7ff ff81 	bl	80005ec <updateClockBuffer>
 
-			  // represent four 7seg led
+
 			  if(index_led >= MAX_LED) index_led = 0;
  80006ea:	4b0f      	ldr	r3, [pc, #60]	; (8000728 <main+0xbc>)
  80006ec:	681b      	ldr	r3, [r3, #0]
@@ -911,7 +911,7 @@ int main(void)
  8000704:	4618      	mov	r0, r3
  8000706:	f7ff fee5 	bl	80004d4 <update7SEG>
 
-			  // toggle dot led
+
 			  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
  800070a:	2110      	movs	r1, #16
  800070c:	4807      	ldr	r0, [pc, #28]	; (800072c <main+0xc0>)

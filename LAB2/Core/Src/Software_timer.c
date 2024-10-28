@@ -15,18 +15,20 @@ int timer_dot_count;
 
 void timer_run(){	//	decrease timer_count by 1 for both two timer_count
 					//and set both timer_flag if its timer_count <= 0
-	if(timer_led_count > 0){
+	if (timer_led_count>0)
+	{
 		timer_led_count--;
-		if(timer_led_count <= 0){
-			timer_led_flag = 1;
-		}
+			if(timer_led_count<=0)
+			{
+				timer_led_flag=1;
+			}
 	}
-
-	if(timer_dot_count > 0){
+	if( timer_dot_count>0){
 		timer_dot_count--;
-		if(timer_dot_count <= 0){
-			timer_dot_flag = 1;
-		}
+			if(timer_dot_count<=0)
+			{
+				timer_dot_flag=1;
+			}
 	}
 }
 
